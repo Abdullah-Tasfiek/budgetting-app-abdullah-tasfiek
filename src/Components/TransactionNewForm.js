@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 
 function TransactionNewForm() {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const [transaction, setTransaction] = useState({
     item: "",
     amount: 0,
@@ -22,12 +22,13 @@ function TransactionNewForm() {
     axios
       .post(`${API}/transactions`, transaction)
       .then((res) => {
-        navigate("/transactions");
+        navigate(`/transactions`);
       })
       .catch((err) => {
         console.warn(err);
       });
   };
+
   return (
     <div className="New">
       <form onSubmit={handleSubmit}>
