@@ -73,7 +73,12 @@ function TransactionNewForm() {
           onChange={handleTextChange}
         />
         <br />
-        <input type="submit" value="Create New Item" />
+        <input
+          type="submit"
+          value="Create New Item"
+          className="button-33"
+          role="button"
+        />
       </form>
     </div>
   );

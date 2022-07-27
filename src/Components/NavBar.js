@@ -6,7 +6,7 @@ export default function NavBar() {
       <h1>
         <Link to="/transactions">Budgeting App</Link>
       </h1>
-      <button>
+      <button className="button-33" role="button">
         <Link to="/transactions/new">New Transaction</Link>
       </button>
     </nav>
