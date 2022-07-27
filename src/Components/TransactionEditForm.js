@@ -82,17 +82,10 @@ function TransactionEditForm() {
           onChange={handleTextChange}
         />
         <br />
-        <input
-          type="submit"
-          className="button-33"
-          role="button"
-          value="Update"
-        />
+        <input type="submit" className="button-33" value="Update" />
       </form>
       <Link to={`/transactions/${index}`}>
-        <button className="button-33" role="button">
-          Go Back
-        </button>
+        <button className="button-33">Go Back</button>
       </Link>
     </div>
   );
