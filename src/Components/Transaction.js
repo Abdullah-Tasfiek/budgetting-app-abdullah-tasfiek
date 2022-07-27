@@ -12,7 +12,7 @@ function Transaction({ transaction, index }) {
         </Link>
       </td>
       <td>
-        <p>{transaction.amount}</p>
+        <p>${transaction.amount}</p>
       </td>
     </tr>
   );

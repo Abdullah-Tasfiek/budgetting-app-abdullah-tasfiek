@@ -19,6 +19,7 @@ function TransactionNewForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     axios
       .post(`${API}/transactions`, transaction)
       .then((res) => {

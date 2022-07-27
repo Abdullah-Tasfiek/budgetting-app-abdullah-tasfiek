@@ -11,29 +11,24 @@ function Transactions() {
     });
   }, []);
 
-  const sumOfTransactions = () => {
-    let sum = 0;
+  let total = 0;
 
-    for (let i = 0; i < transactions.length; i++) {
-      Number(transactions[i].amount);
-      sum += transactions[i].amount;
+  const accountTotal = (total) => {
+    if (total >= 1000) {
+      return "green";
+    } else if (total >= 0) {
+      return "yellow";
     }
-
-    return <p>${Number.parseFloat(sum).toFixed(2)}</p>;
+    return "red";
   };
 
   return (
     <div className="Transactions">
       <section>
         <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Bank Account Total:{sumOfTransactions()}</th>
-            </tr>
-          </thead>
           <tbody>
             {transactions.map((transaction, index) => {
+              total += parseInt(transaction.amount);
               return (
                 <Transaction
                   key={index}
@@ -44,6 +39,8 @@ function Transactions() {
             })}
           </tbody>
         </table>
+        <strong className="total">Bank Account Total: $</strong>{" "}
+        <span className={accountTotal(total)}>{total}</span>
       </section>
     </div>
   );

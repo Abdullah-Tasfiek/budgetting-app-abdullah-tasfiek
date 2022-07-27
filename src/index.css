@@ -1,3 +1,35 @@
 .Nav {
   background-color: aquamarine;
+  padding-top: 5em;
+  margin-top: -5em;
+  margin-right: -1em;
+  margin-left: -1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.total {
+  position: absolute;
+  top: 200px
+}
+
+.green {
+  color: green;
+  position: absolute;
+  top: 200px;
+  left: 10.2em;
+}
+
+.yellow {
+  color: darkkhaki;
+  position: absolute;
+  top: 200px;
+  left: 10.2em;
+}
+
+.red {
+  color: red;
+  position: absolute;
+  top: 200px;
+  left: 10.2em;
 }
